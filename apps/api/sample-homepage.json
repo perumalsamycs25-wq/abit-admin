@@ -1,0 +1,19 @@
+{
+  "newsEvents": {
+    "eyebrow": "Events & Updates",
+    "title": "News & Events",
+    "viewAllText": "View all",
+    "viewAllUrl": "/gallery/"
+  },
+  "whyChooseSection": {
+    "eyebrow": "Why Choose AnuBose",
+    "title": "It begins with good academics",
+    "description": "ABIT begins with good academics and goes so much further from there.",
+    "buttonText": "Learn more"
+  },
+  "pressSection": {
+    "eyebrow": "News coverage",
+    "title": "AnuBose in Press",
+    "description": "ABIT, It begins with good academics, and goes so much further from there."
+  }
+}
