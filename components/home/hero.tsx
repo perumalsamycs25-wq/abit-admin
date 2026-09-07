@@ -4,10 +4,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { ArrowRight, Award, GraduationCap, Sparkles } from 'lucide-react'
-import { cmsImageUrl, type HomepageCms } from '@/lib/cms'
+import type { HomepageData } from '@/lib/homepage-types'
 import { openAdmissionModal } from '@/components/admission-modal'
 
-export function Hero({ content }: { content?: HomepageCms['hero'] }) {
+export function Hero({ content }: { content?: HomepageData['hero'] }) {
   const bannerItems = (content?.banners || []).map((banner) => ({ src: banner.src || banner.imageUrl || '', alt: banner.alt || banner.title || 'ABIT campus' })).filter((banner) => banner.src)
   const announcements = content?.marqueeItems || []
   const [activeBanner, setActiveBanner] = useState(0)
@@ -49,7 +49,7 @@ export function Hero({ content }: { content?: HomepageCms['hero'] }) {
         {bannerItems.map((banner, index) => (
           <Image
             key={banner.src}
-            src={cmsImageUrl(banner.src)}
+            src={banner.src}
             alt={banner.alt || 'ABIT campus'}
             fill
             priority={index === 0}

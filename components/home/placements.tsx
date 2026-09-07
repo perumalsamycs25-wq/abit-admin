@@ -2,10 +2,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { cmsImageUrl, type CmsItem } from '@/lib/cms'
+import type { HomepageItem } from '@/lib/homepage-types'
 
-export function Placements({ items }: { items?: CmsItem[] }) {
-  const recruiterItems = (items || []).map((item) => ({ name: item.title, image: cmsImageUrl(item.imageUrl) })).filter((item) => item.image)
+export function Placements({ items }: { items?: HomepageItem[] }) {
+  const recruiterItems = (items || []).map((item) => ({ name: item.title, image: item.imageUrl || '' })).filter((item) => item.image)
   if (recruiterItems.length === 0) return null
   return (
     <ScrollReveal>

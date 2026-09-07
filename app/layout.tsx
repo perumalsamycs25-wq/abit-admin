@@ -4,7 +4,6 @@ import { Poppins, Inter } from 'next/font/google'
 import './globals.css'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
-import { getHomepageCms } from '@/lib/cms'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -41,12 +40,11 @@ export const viewport: Viewport = {
   themeColor: '#1a3a6b',
 }
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const cms = await getHomepageCms()
   return (
     <html
       lang="en"
@@ -60,7 +58,7 @@ export default async function RootLayout({
       }}>
         <SiteHeader />
         <main>{children}</main>
-        <SiteFooter content={cms?.footer} />
+        <SiteFooter />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

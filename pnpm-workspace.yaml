@@ -3,5 +3,4 @@ minimumReleaseAgeExclude:
   - next
 
 packages:
-  - 'apps/*'
   - 'packages/*'

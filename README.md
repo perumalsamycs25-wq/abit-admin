@@ -20,24 +20,18 @@ yarn dev
 pnpm dev
 ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 ## CMS applications
 
-The public site reads published content from the Express API. On API startup,
-the schema is applied and empty CMS resources are seeded with the initial
-homepage content; existing admin data is never overwritten. Start PostgreSQL with
-`docker compose up -d postgres`, initialize the schema with `pnpm db:init`,
-then create the first administrator by calling `POST /api/auth/bootstrap`.
-You can also run `pnpm db:seed` to fill empty resources manually.
+The public site is a static frontend. It uses local content and images from
+`lib/homepage-data.ts` and `public/`, so it does not require PostgreSQL, an API,
+or the admin application.
 
 Run the applications in separate terminals:
 
 ```bash
-pnpm dev:api
-pnpm dev:admin
-pnpm dev
 ```
+Run the frontend with `pnpm dev`.
 
 The public API is available at `http://localhost:4000`, the admin portal at
 `http://localhost:3001`, and the public website at `http://localhost:3000`.

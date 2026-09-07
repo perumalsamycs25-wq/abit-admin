@@ -5,10 +5,10 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { cmsImageUrl, type CmsItem } from '@/lib/cms'
+import type { HomepageItem } from '@/lib/homepage-types'
 
-export function AdmissionsStrip({ items }: { items?: CmsItem[] }) {
-  const admissionPosters = (items || []).map((item) => ({ image: cmsImageUrl(item.imageUrl), href: item.url || '#', title: item.title })).filter((item) => item.image)
+export function AdmissionsStrip({ items }: { items?: HomepageItem[] }) {
+  const admissionPosters = (items || []).map((item) => ({ image: item.imageUrl || '', href: item.url || '#', title: item.title })).filter((item) => item.image)
   const posterRailRef = useRef<HTMLDivElement>(null)
   const [isPaused, setIsPaused] = useState(false)
 

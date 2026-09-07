@@ -1,6 +1,6 @@
-import type { HomepageCms } from '@/lib/cms'
+import type { HomepageData } from '@/lib/homepage-types'
 
-export const STATIC_HOMEPAGE: HomepageCms = {
+export const STATIC_HOMEPAGE: HomepageData = {
   hero: {
     title: 'Discover the world of possibility with ANUBOSE',
     description: 'AnuBose Institute of Technology for Women inspires students to become confident builders of their future.',

@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { MapPin, Phone, Mail, ChevronRight } from 'lucide-react'
 import { CONTACT } from '@/lib/nav'
-import type { HomepageCms } from '@/lib/cms'
 
 type IconProps = { className?: string }
 
@@ -98,7 +97,8 @@ function FooterColumn({
   )
 }
 
-export function SiteFooter({ content }: { content?: HomepageCms['footer'] }) {
+export function SiteFooter() {
+  const content = undefined
   const footerQuickLinks = content?.quickLinks || quickLinks
   const footerAmenities = content?.amenities || amenities
   const footerCells = content?.cells || cells

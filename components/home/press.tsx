@@ -3,10 +3,10 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { cmsImageUrl, type CmsItem, type HomepageCms } from '@/lib/cms'
+import type { HomepageData, HomepageItem } from '@/lib/homepage-types'
 
-export function Press({ items, content }: { items?: CmsItem[]; content?: HomepageCms['pressSection'] }) {
-  const pressItems = (items || []).map((item) => cmsImageUrl(item.imageUrl)).filter(Boolean)
+export function Press({ items, content }: { items?: HomepageItem[]; content?: HomepageData['pressSection'] }) {
+  const pressItems = (items || []).map((item) => item.imageUrl || '').filter(Boolean)
   const [active, setActive] = useState(0)
   if (pressItems.length === 0) return null
   const visible = [0, 1, 2].map((offset) => pressItems[(active + offset) % pressItems.length])

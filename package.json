@@ -5,11 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "dev:api": "pnpm --dir apps/api dev",
-    "dev:admin": "pnpm --dir apps/admin dev",
-    "db:init": "docker compose exec -T postgres psql -U postgres -d cms_abit -f - < apps/api/schema.sql"
-    ,"db:seed": "docker compose exec -T postgres psql -U postgres -d cms_abit -f - < apps/api/seed.sql"
+    "start": "next start"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",

@@ -9,17 +9,17 @@ import { Placements } from '@/components/home/placements'
 import { STATIC_HOMEPAGE } from '@/lib/homepage-data'
 
 export default function HomePage() {
-  const cms = STATIC_HOMEPAGE
+  const homepage = STATIC_HOMEPAGE
   return (
     <>
-      <Hero content={cms.hero} />
-      <AboutStats content={cms} />
-      <AdmissionsStrip items={cms.admissions} />
-      <NewsEvents items={cms.news} content={cms.newsEvents} />
-      <WhyChoose items={cms.whyChoose} content={cms.whyChooseSection} />
-      <CtaBanner content={cms.cta} />
-      <Press items={cms.press} content={cms.pressSection} />
-      <Placements items={cms.recruiters} />
+      <Hero content={homepage.hero} />
+      <AboutStats content={homepage} />
+      <AdmissionsStrip items={homepage.admissions} />
+      <NewsEvents items={homepage.news} content={homepage.newsEvents} />
+      <WhyChoose items={homepage.whyChoose} content={homepage.whyChooseSection} />
+      <CtaBanner content={homepage.cta} />
+      <Press items={homepage.press} content={homepage.pressSection} />
+      <Placements items={homepage.recruiters} />
     </>
   )
 }

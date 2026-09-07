@@ -2,16 +2,16 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, Phone } from 'lucide-react'
 import { CONTACT } from '@/lib/nav'
-import { cmsImageUrl, type HomepageCms } from '@/lib/cms'
+import type { HomepageData } from '@/lib/homepage-types'
 
-export function CtaBanner({ content }: { content?: HomepageCms['cta'] }) {
+export function CtaBanner({ content }: { content?: HomepageData['cta'] }) {
   if (!content) return null
   return (
     <section className="bg-secondary/40 py-20 sm:py-22">
       <div className="mx-auto max-w-7xl px-6">
         <div className="relative min-h-[330px] overflow-hidden bg-navy px-8 py-16 text-center sm:px-14 sm:py-24">
           <Image
-            src={cmsImageUrl(content.imageUrl)}
+            src={content.imageUrl}
             alt="ABIT campus"
             fill
             className="object-cover opacity-35"

@@ -2,9 +2,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import { ScrollReveal } from '@/components/scroll-reveal'
-import { cmsImageUrl, type HomepageCms } from '@/lib/cms'
+import type { HomepageData } from '@/lib/homepage-types'
 
-export function AboutStats({ content }: { content?: HomepageCms }) {
+export function AboutStats({ content }: { content?: HomepageData }) {
   const about = content?.about
   const aboutPoints = about?.points || []
   const aboutStats = content?.statistics || []
@@ -17,7 +17,7 @@ export function AboutStats({ content }: { content?: HomepageCms }) {
           <div className="relative">
             <div className="overflow-hidden rounded-2xl shadow-xl">
               <Image
-                src={cmsImageUrl(about.imageUrl)}
+                src={about.imageUrl}
                 alt="AnuBose Institute of Technology campus buildings"
                 width={720}
                 height={560}

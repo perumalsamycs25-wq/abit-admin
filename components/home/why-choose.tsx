@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import { BookOpen } from 'lucide-react'
 import { SectionHeading } from '@/components/ui/section-heading'
-import { cmsImageUrl, type CmsItem, type HomepageCms } from '@/lib/cms'
+import type { HomepageData, HomepageItem } from '@/lib/homepage-types'
 
-export function WhyChoose({ items, content }: { items?: CmsItem[]; content?: HomepageCms['whyChooseSection'] }) {
-  const reasonItems = (items || []).map((item) => ({ Icon: BookOpen, title: item.title, text: item.description || '', image: cmsImageUrl(item.imageUrl) }))
+export function WhyChoose({ items, content }: { items?: HomepageItem[]; content?: HomepageData['whyChooseSection'] }) {
+  const reasonItems = (items || []).map((item) => ({ Icon: BookOpen, title: item.title, text: item.description || '', image: item.imageUrl || '' }))
   if (reasonItems.length === 0) return null
   return (
     <section className="border-y border-border bg-[#FFFFFF] py-10 sm:py-10">
