@@ -6,7 +6,7 @@ import { ScrollReveal } from '@/components/scroll-reveal'
 import { cmsImageUrl, type CmsItem, type HomepageCms } from '@/lib/cms'
 
 export function NewsEvents({ items, content }: { items?: CmsItem[]; content?: HomepageCms['newsEvents'] }) {
-  const newsItems = (items || []).map((item) => ({ title: item.title, href: item.url || '#', category: String(item.data?.category || 'News'), image: cmsImageUrl(item.imageUrl), excerpt: item.description || '' })).filter((item) => item.image)
+  const newsItems = (items || []).map((item) => ({ title: item.title, href: item.url || '#', category: String(item.data?.category || 'News'), image: cmsImageUrl(item.imageUrl), dateLabel: String(item.data?.dateLabel || 'Latest updates'), excerpt: item.description || 'NA' })).filter((item) => item.image)
   if (newsItems.length === 0) return null
   return (
     <ScrollReveal>
@@ -40,7 +40,7 @@ export function NewsEvents({ items, content }: { items?: CmsItem[]; content?: Ho
                   src={n.image}
                   alt={n.title}
                   fill
-                  className="object-contain transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 <span className="absolute left-3 top-3 rounded-md bg-navy/90 px-2.5 py-1 text-xs font-semibold text-gold">
@@ -50,7 +50,7 @@ export function NewsEvents({ items, content }: { items?: CmsItem[]; content?: Ho
               <div className="flex flex-1 flex-col p-5">
                 <span className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground">
                   <CalendarDays className="size-3.5 text-accent-foreground" aria-hidden />
-                  Latest update
+                  {n.dateLabel}
                 </span>
                 <h3 className="mt-2 font-heading text-lg font-bold text-navy">
                   {n.title}
