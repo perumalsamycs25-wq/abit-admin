@@ -82,20 +82,20 @@ export function SiteHeader() {
             <img
               src="/ABIT_IMAGES/logo-s1.png"
               alt="AnuBose Institute of Technology logo"
-              className="h-10 sm:h-12 w-auto object-contain"
+              className="h-9 w-auto object-contain sm:h-12"
             />
-            <span className="leading-tight">
-              <span className="block font-heading text-sm font-extrabold uppercase text-primary sm:text-lg">
+            <span className="min-w-0 leading-tight">
+              <span className="block truncate font-heading text-xs font-extrabold uppercase text-primary sm:text-lg">
                 AnuBose Institute of Technology
               </span>
-              <span className="block text-[10px] font-semibold uppercase tracking-[0.12em] text-muted-foreground sm:text-xs">
+              <span className="block truncate text-[9px] font-semibold uppercase tracking-[0.06em] text-muted-foreground sm:text-xs sm:tracking-[0.12em]">
                 For Women&apos;s · New Paloncha, Telangana
               </span>
             </span>
             <img
               src="/ABIT_IMAGES/logo-s2.png"
               alt="AnuBose Institute of Technology NAAC B++ logo"
-              className="hidden sm:block h-10 sm:h-12 w-auto object-contain"
+              className="h-8 w-auto object-contain sm:h-12"
             />
           </Link>
 

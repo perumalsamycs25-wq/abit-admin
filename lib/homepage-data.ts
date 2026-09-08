@@ -7,16 +7,16 @@ export const STATIC_HOMEPAGE: HomepageData = {
     buttonText: 'Apply for Admissions',
     marqueeItems: ['Admissions Open 2026-27', 'Sankranthi Celebrations', 'Discover the world of possibility with ANUBOSE'],
     banners: [
-      { src: '/ABIT_IMAGES/banner01.webp', alt: 'ABIT students learning together' },
-      { src: '/ABIT_IMAGES/bannerp2.jpg', alt: 'ABIT campus building' },
+      { src: '/ABIT_IMAGES/bannerp2.jpg', alt: 'ABIT students learning together' },
+      { src: '/ABIT_IMAGES/banner01.webp', alt: 'ABIT students in the laboratory' },
     ],
   },
   about: {
     imageUrl: '/ABIT_IMAGES/home-01-welcome-image-1-1.png',
-    title: 'A place where learning is maximized',
+    title: "Welcome to AnuBose Institute of Technology For Women's",
     paragraphs: [
-      'AnuBose Institute of Technology (ABIT), located at Paloncha, is an industrial hub in Bhadradri Kothagudem district and is sponsored by the National Educational Trust, Paloncha.',
-      'ABIT expands itself as Always Best In Technical-education. We strive to make students confident and creative builders of their future.',
+      'AnuBose Institute Of Technology (ABIT), located at Paloncha - an industrial hub in Bhadradri Kothagudem district, is sponsored by the National Educational Trust, Paloncha. The members of the trust are eminent personalities in various walks of life and dedicate themselves to the cause of education. In light of this, ABIT was established in 2008 with special attention to technical education and is approved by AICTE, New Delhi and affiliated to the premier and world-renowned Jawaharlal Nehru Technological University, Hyderabad.',
+      'The ABIT expands itself as "Always Best In Technical-education". AnuBose Institute of Technology (ABIT) strives to make students confident and creative builders of their future. ABIT believes learning is maximized when it takes place in an environment enriched with support.',
     ],
     points: ['Approved by AICTE, New Delhi', 'Affiliated to JNTU, Hyderabad', 'Sponsored by National Educational Trust, Paloncha'],
     buttonText: 'Read More',

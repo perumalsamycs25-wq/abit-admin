@@ -21,22 +21,15 @@ pnpm dev
 ```
 
 
-## CMS applications
-
 The public site is a static frontend. It uses local content and images from
 `lib/homepage-data.ts` and `public/`, so it does not require PostgreSQL, an API,
-or the admin application.
+or an admin application.
 
-Run the applications in separate terminals:
+Run the frontend with:
 
 ```bash
+pnpm dev
 ```
-Run the frontend with `pnpm dev`.
-
-The public API is available at `http://localhost:4000`, the admin portal at
-`http://localhost:3001`, and the public website at `http://localhost:3000`.
-Copy `apps/api/.env.example` to `apps/api/.env` and set a strong
-`JWT_SECRET` and `ADMIN_PASSWORD` before using the portal outside local development.
 
 ## Learn More
 

@@ -4,7 +4,6 @@ import { DepartmentTemplate } from '@/components/department-template'
 import { CONTENT, resolveNav, normalizeKey, type PageContent } from '@/lib/content'
 import { DEPARTMENTS } from '@/lib/departments'
 import type { Crumb } from '@/components/page-hero'
-import { getPublishedPage } from '@/lib/cms'
 import { ApprovalAccreditationSection } from '@/components/approval-accreditation-section'
 import { AcademicCalendarTabs } from '@/components/academic-calendar-tabs'
 import { AcademicSyllabusTabs } from '@/components/academic-syllabus-tabs'
@@ -72,11 +71,6 @@ export default async function CatchAllPage({
 
   const fallbackTitle = titleFromSlug(slug)
   const { crumbs, title } = buildCrumbs(key, fallbackTitle)
-
-  const publishedPage = await getPublishedPage(key)
-  if (publishedPage) {
-    return <ContentPage content={{ title: publishedPage.title, sections: Object.values(publishedPage.sections), image: bannerForKey(key) }} crumbs={crumbs} />
-  }
 
   // Registered rich content
   const registered = CONTENT[key]
