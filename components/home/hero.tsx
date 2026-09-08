@@ -88,7 +88,7 @@ export function Hero({ content }: { content?: HomepageData['hero'] }) {
                 Discover ABIT
                 <ArrowRight className="size-4" aria-hidden />
               </Link>
-            </div>
+            </div> 
           </div>
         </div>
         <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 gap-2" aria-label="Banner slides">
